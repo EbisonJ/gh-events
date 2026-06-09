@@ -4,6 +4,11 @@ on:
     types:
       - opened
   workflow_dispatch:
+   inputs:
+     pr_number:
+       description: 'Pull request number to re-check'
+       required: true
+       type: number
 jobs:
   deploy:
     runs-on: ubuntu-latest
